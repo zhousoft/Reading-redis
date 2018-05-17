@@ -146,7 +146,9 @@ static int spt_copyargs(int argc, char *argv[]) {
 
 
 void spt_init(int argc, char *argv[]) {
-        char **envp = environ;
+	//函数目的是拆散传入的argv参数，为了修改启动后进程名？
+	//environ 指向linux环境变量
+    char **envp = environ;
 	char *base, *end, *nul, *tmp;
 	int i, error;
 
