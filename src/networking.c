@@ -1555,7 +1555,7 @@ void readQueryFromClient(aeEventLoop *el, int fd, void *privdata, int mask) {
     // 设置服务器的当前客户端
     server.current_client = c;
     
-    // 读入长度（默认为 16 MB）
+    // 读入长度（默认为 16KB）
     readlen = REDIS_IOBUF_LEN;
 
     /* If this is a multi bulk request, and we are processing a bulk reply
